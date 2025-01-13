@@ -125,11 +125,12 @@
             this.exit.AutoSize = true;
             this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.Location = new System.Drawing.Point(547, 3);
+            this.exit.Location = new System.Drawing.Point(554, 2);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(18, 19);
             this.exit.TabIndex = 10;
             this.exit.Text = "X";
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // panel1
             // 
