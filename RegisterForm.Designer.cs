@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.singup_btn = new System.Windows.Forms.Button();
-            this.login_showPass = new System.Windows.Forms.CheckBox();
-            this.signu_password = new System.Windows.Forms.TextBox();
+            this.signup_showPass = new System.Windows.Forms.CheckBox();
+            this.signup_password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.signup_username = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,26 +61,29 @@
             this.singup_btn.TabIndex = 17;
             this.singup_btn.Text = "SIGNUP";
             this.singup_btn.UseVisualStyleBackColor = false;
+            this.singup_btn.Click += new System.EventHandler(this.singup_btn_Click);
             // 
-            // login_showPass
+            // signup_showPass
             // 
-            this.login_showPass.AutoSize = true;
-            this.login_showPass.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.login_showPass.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_showPass.Location = new System.Drawing.Point(443, 259);
-            this.login_showPass.Name = "login_showPass";
-            this.login_showPass.Size = new System.Drawing.Size(101, 17);
-            this.login_showPass.TabIndex = 16;
-            this.login_showPass.Text = "Show Password";
-            this.login_showPass.UseVisualStyleBackColor = false;
+            this.signup_showPass.AutoSize = true;
+            this.signup_showPass.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.signup_showPass.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signup_showPass.Location = new System.Drawing.Point(443, 259);
+            this.signup_showPass.Name = "signup_showPass";
+            this.signup_showPass.Size = new System.Drawing.Size(101, 17);
+            this.signup_showPass.TabIndex = 16;
+            this.signup_showPass.Text = "Show Password";
+            this.signup_showPass.UseVisualStyleBackColor = false;
+            this.signup_showPass.CheckedChanged += new System.EventHandler(this.login_showPass_CheckedChanged);
             // 
-            // signu_password
+            // signup_password
             // 
-            this.signu_password.Location = new System.Drawing.Point(284, 223);
-            this.signu_password.Multiline = true;
-            this.signu_password.Name = "signu_password";
-            this.signu_password.Size = new System.Drawing.Size(260, 30);
-            this.signu_password.TabIndex = 15;
+            this.signup_password.Location = new System.Drawing.Point(284, 223);
+            this.signup_password.Multiline = true;
+            this.signup_password.Name = "signup_password";
+            this.signup_password.PasswordChar = '*';
+            this.signup_password.Size = new System.Drawing.Size(260, 30);
+            this.signup_password.TabIndex = 15;
             // 
             // label4
             // 
@@ -198,8 +201,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 400);
             this.Controls.Add(this.singup_btn);
-            this.Controls.Add(this.login_showPass);
-            this.Controls.Add(this.signu_password);
+            this.Controls.Add(this.signup_showPass);
+            this.Controls.Add(this.signup_password);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.signup_username);
             this.Controls.Add(this.label3);
@@ -221,8 +224,8 @@
         #endregion
 
         private System.Windows.Forms.Button singup_btn;
-        private System.Windows.Forms.CheckBox login_showPass;
-        private System.Windows.Forms.TextBox signu_password;
+        private System.Windows.Forms.CheckBox signup_showPass;
+        private System.Windows.Forms.TextBox signup_password;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox signup_username;
         private System.Windows.Forms.Label label3;

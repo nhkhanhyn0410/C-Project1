@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.signupRegister_btn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.login_showPass = new System.Windows.Forms.CheckBox();
             this.login_btn = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(270, 400);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Pj5.Properties.Resources.download__2_;
+            this.pictureBox2.Location = new System.Drawing.Point(75, 69);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // label6
             // 
@@ -84,6 +93,7 @@
             this.signupRegister_btn.TabIndex = 1;
             this.signupRegister_btn.Text = "SIGNUP";
             this.signupRegister_btn.UseVisualStyleBackColor = false;
+            this.signupRegister_btn.Click += new System.EventHandler(this.signupRegister_btn_Click);
             // 
             // label5
             // 
@@ -130,6 +140,7 @@
             // 
             // login_username
             // 
+            this.login_username.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_username.Location = new System.Drawing.Point(291, 153);
             this.login_username.Multiline = true;
             this.login_username.Name = "login_username";
@@ -141,6 +152,7 @@
             this.login_password.Location = new System.Drawing.Point(291, 223);
             this.login_password.Multiline = true;
             this.login_password.Name = "login_password";
+            this.login_password.PasswordChar = '*';
             this.login_password.Size = new System.Drawing.Size(260, 30);
             this.login_password.TabIndex = 6;
             // 
@@ -165,6 +177,7 @@
             this.login_showPass.TabIndex = 7;
             this.login_showPass.Text = "Show Password";
             this.login_showPass.UseVisualStyleBackColor = false;
+            this.login_showPass.CheckedChanged += new System.EventHandler(this.login_showPass_CheckedChanged);
             // 
             // login_btn
             // 
@@ -182,15 +195,6 @@
             this.login_btn.TabIndex = 8;
             this.login_btn.Text = "LOGIN";
             this.login_btn.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Pj5.Properties.Resources.download__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(75, 69);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
