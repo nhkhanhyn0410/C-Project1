@@ -1,4 +1,6 @@
-﻿namespace Pj5
+﻿using System;
+
+namespace Pj5
 {
     partial class RegisterForm
     {
@@ -73,11 +75,12 @@
             this.signup_showPass.Size = new System.Drawing.Size(101, 17);
             this.signup_showPass.TabIndex = 16;
             this.signup_showPass.Text = "Show Password";
-            this.signup_showPass.UseVisualStyleBackColor = false;
-            this.signup_showPass.CheckedChanged += new System.EventHandler(this.login_showPass_CheckedChanged);
+            this.signup_showPass.UseVisualStyleBackColor = true;
+            this.signup_showPass.CheckedChanged += new System.EventHandler(this.signup_showPass_CheckedChanged);
             // 
             // signup_password
             // 
+            this.signup_password.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup_password.Location = new System.Drawing.Point(284, 223);
             this.signup_password.Multiline = true;
             this.signup_password.Name = "signup_password";
@@ -97,6 +100,7 @@
             // 
             // signup_username
             // 
+            this.signup_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup_username.Location = new System.Drawing.Point(284, 153);
             this.signup_username.Multiline = true;
             this.signup_username.Name = "signup_username";
@@ -183,6 +187,7 @@
             this.signInLogin_btn.TabIndex = 1;
             this.signInLogin_btn.Text = "SIGN IN";
             this.signInLogin_btn.UseVisualStyleBackColor = false;
+            this.signInLogin_btn.Click += new System.EventHandler(this.signInLogin_btn_Click);
             // 
             // label5
             // 

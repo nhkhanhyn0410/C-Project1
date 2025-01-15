@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 
 namespace Pj5
 {
     public partial class RegisterForm : Form
     {
-        SqlConnection connect 
+        SqlConnection connect
             = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Code\C#\Pj\Pj5\employee.mdf;Integrated Security=True;Connect Timeout=30");
         public RegisterForm()
         {
@@ -24,14 +25,14 @@ namespace Pj5
         //Signup account btn
         private void singup_btn_Click(object sender, EventArgs e)
         {
-            if(signup_username.Text == "" || signup_password.Text == "")
+            if (signup_username.Text == "" || signup_password.Text == "")
             {
                 MessageBox.Show("Please fill all blank fields",
                     "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if(connect.State != ConnectionState.Open)
+                if (connect.State != ConnectionState.Open)
                 {
                     try
                     {
@@ -41,7 +42,7 @@ namespace Pj5
                         using (SqlCommand checkUser = new SqlCommand(selectUsername, connect))
                         {
                             checkUser.Parameters.AddWithValue("@user", signup_username.Text.Trim());
-                            int count = (int ) checkUser.ExecuteScalar();
+                            int count = (int)checkUser.ExecuteScalar();
 
                             if (count >= 1)
                             {
@@ -51,9 +52,9 @@ namespace Pj5
                             else
                             {
                                 DateTime today = DateTime.Today;
-                                string insertData = "INSERT INYO users " +
-                                    "(username, password, date_register" +
-                                    "VALUES(@username, @passwprd, @dateReg";
+                                string insertData = "INSERT INTO users " +
+                                    "(username, password, date_register)" +
+                                    "VALUES(@username, @password, @dateReg)";
 
                                 using (SqlCommand cmd = new SqlCommand(insertData, connect))
                                 {
@@ -78,7 +79,7 @@ namespace Pj5
 
 
 
-                        
+
 
 
                     }
@@ -91,23 +92,38 @@ namespace Pj5
                     {
                         connect.Close();
                     }
+                }
+
+
+
+
+
+
+
+
+            }
         }
-
-
-
-
         //Exit registerFrom
         private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         //Show Password registerFrom
-        private void login_showPass_CheckedChanged(object sender, EventArgs e)
+        private void signup_showPass_CheckedChanged(object sender, EventArgs e)
         {
             signup_password.PasswordChar = signup_showPass.Checked ? '\0' : '*';
         }
 
-        
+        private void signInLogin_btn_Click(object sender, EventArgs e)
+        {
+            Form1 loginForm = new Form1();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }
+
+
+        
+
+        

@@ -33,5 +33,7 @@ namespace Pj5
             regForm.Show();
             this.Hide();
         }
+
+
     }
 }
